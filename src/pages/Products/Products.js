@@ -13,9 +13,7 @@ const Products = () => {
                             <h2>
                                 Jaquar
                             </h2>
-                            <p>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.
-                            </p>
+                           
                             <a href="#" class="button">
                                 Explore
                             </a>
@@ -27,9 +25,7 @@ const Products = () => {
                             <h2>
                                 Jaquar
                             </h2>
-                            <p>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.
-                            </p>
+                          
                             <a href="#" class="button">
                                 Explore
                             </a>
@@ -41,9 +37,7 @@ const Products = () => {
                             <h2>
                                 Jaquar
                             </h2>
-                            <p>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.
-                            </p>
+                          
                             <a href="#" class="button">
                                 Explore
                             </a>
@@ -55,9 +49,7 @@ const Products = () => {
                             <h2>
                                 Jaquar
                             </h2>
-                            <p>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.
-                            </p>
+                         
                             <a href="#" class="button">
                                 Explore
                             </a>

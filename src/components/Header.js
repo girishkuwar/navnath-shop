@@ -1,13 +1,15 @@
 import React from 'react'
 import "./header.css"
 import { Link } from 'react-router-dom'
+import logo from "../img/dp.jpg"
 
 const Header = () => {
   return (
     <div>
         <nav>
             <div className="logo">
-                <h1>Ushantas-Navath-Traders</h1>
+              <img src={logo} alt="" />
+                <h1>Navath-Traders</h1>
             </div>
             <div className="inputbox">
             <input type="text" placeholder='Find your product'/>
@@ -15,7 +17,7 @@ const Header = () => {
             </div>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><Link to={'/products'}>Products</Link></li>
+                <li><a href="#products">Products</a></li>
                 <li><a href="/">Services</a></li>
                 <li><a href="/">About</a></li>
                 <li><a href="/">Contact</a></li>

@@ -4,4 +4,12 @@
     background-image: url(../../img/pexels-max-rahubovskiy-6207947\ \(2\).jpg);
     background-position: center;
     background-size: cover;
+    
+}
+.brand {
+    padding: 60px 0;
+}
+.brand h1 {
+    text-align: center;
+    font-size: 5rem;
 }
