@@ -7,7 +7,7 @@ const Header = () => {
     <div>
         <nav>
             <div className="logo">
-                <h1>Navath-Traders</h1>
+                <h1>Ushantas-Navath-Traders</h1>
             </div>
             <div className="inputbox">
             <input type="text" placeholder='Find your product'/>
