@@ -20,6 +20,7 @@ nav .logo {
 }
 nav .logo img {
     width: 35px;
+    height: 35px;
     border-radius: 50px;
     margin: 0 10px;
 }
