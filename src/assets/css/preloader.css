@@ -1,0 +1,49 @@
+.loader {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1111;
+    background: #fff;
+    overflow-x: hidden;
+  
+  
+  
+    background: none repeat scroll 0 0 #fff;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      z-index: 9999;
+   
+  }
+  
+  .loader-inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 50px;
+  
+  
+  
+      position: absolute;
+          background: #fff url(../images/Motocross.gif) center center no-repeat; 
+          background-size: cover;
+          height: 250px;
+          width: 250px;
+          /* margin: -30px 0 0 -30px; */
+          left: 50%;
+          top: 50%;
+    
+  }
