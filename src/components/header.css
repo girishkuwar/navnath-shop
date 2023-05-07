@@ -19,15 +19,13 @@ nav .logo {
     display: flex;
 }
 nav .logo img {
+    display: none;
     width: 35px;
+    height: 35px;
     border-radius: 50px;
     margin: 0 10px;
 }
-nav .logo img:hover {
-    top: 85px;
-    position: absolute;
-    width: 555px;
-}
+
 nav .inputbox {
     width: 300px;
     height: 30px;
