@@ -1,9 +1,17 @@
 import React from 'react'
 import "./header.css"
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import logo from "../assets/dp.jpg"
 
 const Header = () => {
+    const auth = localStorage.getItem('user');
+    const navigate = useNavigate();
+
+    const logout = () => {
+        localStorage.clear();
+        // navigate('/signup');
+    }
+    // console.log(auth.email);
     return (
         <div>
             <nav>
@@ -21,7 +29,12 @@ const Header = () => {
                     <li><a href="/">Services</a></li>
                     <li><a href="/">About</a></li>
                     <li><a href="/">Contact</a></li>
+                    {
+                        auth ? <li><a href="" onClick={logout}>LogOut</a></li> :
+                        <li><Link to={"/login"}>Log In</Link></li>
+                    }
                 </ul>
+                
             </nav>
         </div>
     )
