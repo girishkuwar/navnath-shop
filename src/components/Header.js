@@ -1,17 +1,29 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import "./header.css"
 import { Link, useNavigate } from 'react-router-dom'
 import logo from "../assets/dp.jpg"
+import cartimg from "../assets/shopping-cart-icon.jpg"
+import cartContext from '../context/CartContext'
 
 const Header = () => {
     const auth = localStorage.getItem('user');
     const navigate = useNavigate();
-
+    const cart = JSON.parse(localStorage.getItem('cart'));
+    const cartc = useContext(cartContext);
+    
+    useEffect(() => {
+        cartc.update();
+    }, [])
+    
+    
+    
+    
     const logout = () => {
         localStorage.clear();
-        // navigate('/signup');
     }
-    // console.log(auth.email);
+
+
+
     return (
         <div>
             <nav>
@@ -31,10 +43,17 @@ const Header = () => {
                     <li><a href="/">Contact</a></li>
                     {
                         auth ? <li><a href="" onClick={logout}>LogOut</a></li> :
-                        <li><Link to={"/login"}>Log In</Link></li>
+                            <li><Link to={"/login"}>Log In</Link></li>
                     }
+                    <li><Link to={"/cart"}>
+                        <img src={cartimg} style={{ width: "30px" }} alt="" />
+                        {cart ? 
+                        <span className='cart-item'>{cartc.cart.length}</span> 
+                        :
+                         ""
+                         }</Link></li>
                 </ul>
-                
+
             </nav>
         </div>
     )
