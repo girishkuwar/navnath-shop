@@ -29,7 +29,7 @@ const Header = () => {
             <nav>
                 <div className="logo">
                     <img src={logo} alt="" />
-                    <h1>NavNath-Traders</h1>
+                 <Link to={"/admin"}><h1>NavNath-Traders</h1></Link>
                 </div>
                 <div className="inputbox">
                     <input type="text" placeholder='Find your product' />

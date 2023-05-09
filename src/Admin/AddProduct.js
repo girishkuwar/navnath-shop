@@ -1,7 +1,6 @@
 import { addDoc, collection, onSnapshot, query } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react'
 import { db } from '../firebase.config';
-import { doc, setDoc } from "firebase/firestore";
 
 const AddProduct = () => {
     const [name, setName] = useState("");
