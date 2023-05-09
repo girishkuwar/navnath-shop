@@ -24,10 +24,11 @@ const Signup = () => {
     }
     return (
         <div className='form'>
+           <h1> Create New Account </h1>
+            <input type="text" placeholder='Name'/>
             <input type="text" placeholder='Email' onChange={(e) => setemail(e.target.value)} />
             <input type="text" placeholder='Password' onChange={(e) => setpassword(e.target.value)} />
             <button onClick={signup}>Signup</button><span>Allready Have Account <Link to={"/login"}>Login</Link></span>
-
         </div>
     )
 }

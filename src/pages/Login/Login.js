@@ -31,6 +31,7 @@ const Login = () => {
 
     return (
         <div className='form'>
+            <h1>Login </h1>
             <input type="text" placeholder='Email' onChange={(e) => setemail(e.target.value)} />
             <input type="text" placeholder='Password' onChange={(e) => setpassword(e.target.value)} />
             <button onClick={login}>Login</button><span>New Here <Link to={"/signup"}>Create Account</Link></span>
