@@ -17,7 +17,8 @@ const Login = () => {
                 const user = userCredential.user;
                 console.log("Logged Successfuly")
                 alert("Success")
-                localStorage.setItem("user",user);
+                localStorage.setItem("user",user.uid);
+                console.log(user);
                 navigate('/');
             })
             .catch((error) => {

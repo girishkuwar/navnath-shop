@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import "./productpage.css"
 import { useNavigate, useParams } from "react-router-dom"
-import { collection, onSnapshot, query, doc, getDoc } from 'firebase/firestore';
+import { collection, onSnapshot, query, doc, getDoc, addDoc } from 'firebase/firestore';
 import { db } from '../../firebase.config';
 import cartContext from '../../context/CartContext';
 
@@ -9,6 +9,7 @@ const ProductPage = () => {
   const [product, setProduct] = useState("");
   const { id } = useParams();
   const cartc = useContext(cartContext);
+  const userID = localStorage.getItem('user');
 
   const getProduct = async () => {
     const docRef = doc(db, "products", id);
@@ -21,22 +22,20 @@ const ProductPage = () => {
       console.log("No such document!");
     }
   }
-
-
-  const addtocart = () => {
-    var oldItems = JSON.parse(localStorage.getItem('cart')) || [];
-    oldItems.push(product);
-    localStorage.setItem('cart', JSON.stringify(oldItems));
-
-    alert("Added Item To Cart");
+  
+  const addtocart = async () => {
+    let prod = product;
+    prod.productid = id;
+    const docRef = await addDoc(collection(db, "cart", userID, "cart_item"), prod);
+    alert("Added To Cart");
     cartc.update();
-}
+  }
 
 
   useEffect(() => {
     getProduct();
   }, [])
-  
+
   return (
     <div className='productdetails'>
       <div className="col">
