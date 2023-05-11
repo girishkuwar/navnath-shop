@@ -1,0 +1,24 @@
+.productdetails {
+    padding-top: 100px;
+}
+.productdetails .col {
+    display: flex;
+    margin-top: 100px;
+}
+.productdetails .row {
+    width: 50%;
+}
+.productdetails .row img {
+    width: 80%;
+}
+.productdetails h1 {
+    margin-bottom: 20px;
+}
+.productdetails h2 {
+    margin: 10px 0;
+}
+.productdetails .row button {
+    padding: 5px 10px;
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
