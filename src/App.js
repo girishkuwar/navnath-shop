@@ -12,6 +12,9 @@ import Cart from './pages/Cart/Cart';
 import Admin from './Admin/Admin'
 import AddProduct from './Admin/AddProduct';
 import Cartstate from './context/CartState';
+import Contact from './pages/Contact/Contact';
+import ViewContact from './Admin/ViewContact';
+import ViewProducts from './Admin/ViewProducts';
 function App() {
 
 
@@ -29,10 +32,13 @@ function App() {
             <Route path="signup" element={<Signup />} />
             <Route path="login" element={<Login />} />
             <Route path="cart" element={<Cart />} />
+            <Route path="contact" element={<Contact />} />
           </Route>
           <Route path='/admin' element={<Admin />}>
             <Route index element={<AddProduct />} />
-            <Route path='addproduct' element={<AddProduct />} />
+            <Route path='/admin/addproduct' element={<AddProduct />} />
+            <Route path='/admin/viewproducts' element={<ViewProducts />} />
+            <Route path='/admin/viewcontact' element={<ViewContact />} />
 
           </Route>
         </Routes>

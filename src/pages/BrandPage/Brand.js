@@ -33,6 +33,7 @@ const Brand = () => {
             setProducts(products);
         })
         getBrand();
+        window.scrollTo(0, 0);
 
         return () => { unsub(); }
     }, [])
