@@ -13,6 +13,8 @@ import Admin from './Admin/Admin'
 import AddProduct from './Admin/AddProduct';
 import Cartstate from './context/CartState';
 import Contact from './pages/Contact/Contact';
+import ViewContact from './Admin/ViewContact';
+import ViewProducts from './Admin/ViewProducts';
 function App() {
 
 
@@ -34,7 +36,9 @@ function App() {
           </Route>
           <Route path='/admin' element={<Admin />}>
             <Route index element={<AddProduct />} />
-            <Route path='addproduct' element={<AddProduct />} />
+            <Route path='/admin/addproduct' element={<AddProduct />} />
+            <Route path='/admin/viewproducts' element={<ViewProducts />} />
+            <Route path='/admin/viewcontact' element={<ViewContact />} />
 
           </Route>
         </Routes>

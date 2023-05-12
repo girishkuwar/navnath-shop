@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import "./header.css"
 import { Link, useNavigate } from 'react-router-dom'
-import logo from "../assets/dp.jpg"
+import logo from "../assets/logo.jpeg"
 import cartimg from "../assets/shopping-cart-icon.jpg"
 import cartContext from '../context/CartContext'
 

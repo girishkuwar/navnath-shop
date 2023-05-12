@@ -9,6 +9,7 @@
 .admin .menu {
     background-color: rgb(0, 128, 247);
     height: 100vh;
+    position: fixed;
 }
 .admin .menu  li{
     list-style: none;
@@ -24,4 +25,18 @@
 .admin h2 {
     padding: 10px;
     color: #ffffff;
+}
+.admin .menu-space {
+    width: 200px;
+}
+
+/* contact */
+.contact-details {
+    padding: 25px 0;
+}
+.contact-details h5 {
+    margin: 5px 0;
+}
+.contact-details h1 {
+    margin-bottom: 10px;
 }
