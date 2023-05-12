@@ -15,9 +15,10 @@ const Login = () => {
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
-                console.log("Logged Successfuly")
-                alert("Success")
+                console.log("Logged Successfuly");
+                alert("LogIn Successfully");
                 localStorage.setItem("user",user.uid);
+                localStorage.setItem("useremail",user.email);
                 console.log(user);
                 navigate('/');
             })

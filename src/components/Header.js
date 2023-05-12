@@ -13,13 +13,14 @@ const Header = () => {
 
     useEffect(() => {
         cartc.update();
-    }, [])
+    }, [cartc])
 
 
 
 
     const logout = () => {
         localStorage.clear();
+        alert("LogOut Successfully")
     }
 
 
@@ -45,6 +46,7 @@ const Header = () => {
                         auth ? <li><a href="" onClick={logout}>LogOut</a></li> :
                             <li><Link to={"/login"}>Log In</Link></li>
                     }
+                    <li></li>
                     <li><Link to={"/cart"}>
                         <img src={cartimg} style={{ width: "30px" }} alt="" />
                         {cart ?
