@@ -1,42 +1,70 @@
 .admin {
- display: flex;   
+    display: flex;
 }
+
 .admin .line {
     width: 90%;
     height: 1px;
     background-color: #cecece;
 }
+
 .admin .menu {
     background-color: rgb(0, 128, 247);
     height: 100vh;
     position: fixed;
 }
-.admin .menu  li{
+
+.admin .menu li {
     list-style: none;
     margin: 25px 0;
 }
-.admin .menu  li a {
+
+.admin .menu li a {
     color: #ffffff;
     font-size: .8rem;
 }
+
 .admin .container {
     padding: 20px 8%;
 }
+
 .admin h2 {
     padding: 10px;
     color: #ffffff;
 }
+
 .admin .menu-space {
     width: 200px;
 }
+
+.admin .login {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin .login input {
+    height: 25px;
+    width: 250px;
+    padding: 5px 5px;
+}
+
+.admin .login img {
+    width: 55px;
+}
+
 
 /* contact */
 .contact-details {
     padding: 25px 0;
 }
+
 .contact-details h5 {
     margin: 5px 0;
 }
+
 .contact-details h1 {
     margin-bottom: 10px;
 }

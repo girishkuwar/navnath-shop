@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import "./auth.css"
-import { Link } from 'react-router-dom';
-import { addDoc, collection } from 'firebase/firestore';
+import { Link, useNavigate } from 'react-router-dom';
+import { addDoc, collection, doc, setDoc } from 'firebase/firestore';
 import { db } from '../../firebase.config';
 
 const Signup = () => {
     const auth = getAuth();
     const [name, setName] = useState("");
     const [email, setemail] = useState("");
-    const [password, setpassword] = useState("")
+    const [password, setpassword] = useState("");
+    const navigate = useNavigate();
 
     const signup = () => {
         createUserWithEmailAndPassword(auth, email, password)
@@ -17,21 +18,28 @@ const Signup = () => {
                 const user = userCredential.user;
                 console.log(user);
                 alert("Account created succssfully")
-                addUser();
+                addUser(user.uid);
+                navigate("/login");
+                
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 console.log(error);
-                // ..
+                alert("Error");
             });
     }
 
 
-    const addUser = async () => {
+    const addUser = async (id) => {
         const docRef = await addDoc(collection(db, "users"), {
             name: name,
             email: email
+        });
+        const UserRef = collection(db, "users");
+        await setDoc(doc(UserRef, id),{
+            name: name,
+            email : email
         });
     }
 

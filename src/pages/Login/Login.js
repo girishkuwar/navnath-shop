@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import "./auth.css"
 import { Link, useNavigate } from 'react-router-dom';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../../firebase.config';
 
 
 const Login = () => {
@@ -20,6 +22,7 @@ const Login = () => {
                 localStorage.setItem("user",user.uid);
                 localStorage.setItem("useremail",user.email);
                 console.log(user);
+                getUser(user.uid);
                 navigate('/');
             })
             .catch((error) => {
@@ -29,6 +32,18 @@ const Login = () => {
                 alert("Error")
             });
     }
+    const getUser = async (id) => {
+        const docRef = doc(db, "users", id);
+        const docSnap = await getDoc(docRef);
+    
+        if (docSnap.exists()) {
+          console.log("Document data:", docSnap.data());
+            localStorage.setItem("userdetails",docSnap.data().name);
+        } else {
+          console.log("No such document!");
+        }
+      }
+
 
 
     return (
