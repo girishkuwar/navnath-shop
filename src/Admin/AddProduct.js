@@ -36,6 +36,7 @@ const AddProduct = () => {
 
     return (
         <div>
+            <h1>Add Product</h1>
             <h5>name</h5>
             <input type="text" onChange={(e) => { setName(e.target.value) }} />
             <h5>description</h5>

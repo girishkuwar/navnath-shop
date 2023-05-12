@@ -10,14 +10,14 @@ const Header = () => {
     const navigate = useNavigate();
     const cart = JSON.parse(localStorage.getItem('cart'));
     const cartc = useContext(cartContext);
-    
+
     useEffect(() => {
         cartc.update();
     }, [])
-    
-    
-    
-    
+
+
+
+
     const logout = () => {
         localStorage.clear();
     }
@@ -29,7 +29,7 @@ const Header = () => {
             <nav>
                 <div className="logo">
                     <img src={logo} alt="" />
-                 <Link to={"/admin"}><h1>NavNath-Traders</h1></Link>
+                    <Link to={"/admin"}><h1>NavNath-Traders</h1></Link>
                 </div>
                 <div className="inputbox">
                     <input type="text" placeholder='Find your product' />
@@ -39,22 +39,23 @@ const Header = () => {
                     <li><a href="/">Home</a></li>
                     <li><a href="/#products">Products</a></li>
                     <li><a href="/">Services</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Contact</a></li>
+                    <li><Link to={"/about"} >About</Link></li>
+                    <li><Link to={"/contact"}>Contact</Link></li>
                     {
                         auth ? <li><a href="" onClick={logout}>LogOut</a></li> :
                             <li><Link to={"/login"}>Log In</Link></li>
                     }
                     <li><Link to={"/cart"}>
                         <img src={cartimg} style={{ width: "30px" }} alt="" />
-                        {cart ? 
-                        <span className='cart-item'>{cartc.cart.length}</span> 
-                        :
-                         ""
-                         }</Link></li>
+                        {cart ?
+                            <span className='cart-item'>{cartc.cart.length}</span>
+                            :
+                            ""
+                        }</Link></li>
                 </ul>
 
             </nav>
+            <div className="empty"></div>
         </div>
     )
 }

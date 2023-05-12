@@ -34,6 +34,7 @@ const ProductPage = () => {
 
   useEffect(() => {
     getProduct();
+    window.scrollTo(0, 0);
   }, [])
 
   return (
@@ -44,8 +45,8 @@ const ProductPage = () => {
         </div>
         <div className="row">
           <h1>{product.name}</h1>
-          <h2>Price ₹: {product.price}</h2>
-          <p>desc {product.desc}</p>
+          <h2>₹: {product.price}</h2>
+          <p><b>Desciption : </b> {product.desc}</p>
           <button onClick={addtocart}>Add to Cart</button>
         </div>
       </div>

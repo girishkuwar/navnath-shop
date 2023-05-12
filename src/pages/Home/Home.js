@@ -6,6 +6,7 @@ import Products from '../Products/Products'
 const Home = () => {
   return (<>
   <section className='banner'>
+    <div className="text">Sanitary Ware</div>
   </section>
   <section className='brand' id='products'>
     <h1>BRANDS</h1>

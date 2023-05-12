@@ -4,7 +4,16 @@
     background-image: url(../../assets/pexels-max-rahubovskiy-6207947\ \(2\).jpg);
     background-position: center;
     background-size: cover;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner .text {
+    font-size: 3rem;
+    color: aliceblue;
+    padding: 29px 66px;
+    background-color: rgba(0, 0, 0, 0.365);
+    border-radius: 10px;
 }
 .brand {
     padding: 60px 0;
