@@ -7,6 +7,7 @@ const Contact = () => {
     const [message, setMessage] = useState("");
     const [name, setName] = useState("");
     const [company, setCompany] = useState("");
+    const [lname, setLname] = useState("");
     const [state, setState] = useState("");
     const [city, setCity] = useState("");
     const [area, setArea] = useState("");
@@ -20,8 +21,8 @@ const Contact = () => {
         if (name !== "" && message !== "" && company !== "" && state !== "" && area !== "" && city !== "" && phone !== "" && email !== "") {
             const docRef = await addDoc(collection(db, "contact"), {
                 name: name,
+                lastName : lname,
                 message: message,
-                company: company,
                 state: state,
                 city: city,
                 area: area,
@@ -53,12 +54,12 @@ const Contact = () => {
                     <table>
                         <tbody><tr>
                             <td>
-                                <p class="form-field">Name*<br />
+                                <p class="form-field">First Name*<br />
                                     <span class="fullName"><input type="text" name="fullName" aria-required="true" aria-invalid="false" onChange={(e) => setName(e.target.value)} /></span></p>
                             </td>
                             <td>
-                                <p class="form-field">Company<br />
-                                    <span class="company"><input type="text" name="company" class="" aria-invalid="false" onChange={(e) => setCompany(e.target.value)} /></span> </p>
+                                <p class="form-field">Last Name*<br />
+                                    <span class="company"><input type="text" name="name" class="" aria-invalid="false" onChange={(e) => setLname(e.target.value)} /></span> </p>
                             </td>
                         </tr>
                             <tr>
