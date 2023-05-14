@@ -1,6 +1,6 @@
 import { useState } from "react";
 import cartContext from "./CartContext";
-import { collection, onSnapshot, query } from "firebase/firestore";
+import { collection, deleteDoc, doc, onSnapshot, query } from "firebase/firestore";
 import { db } from "../firebase.config";
 import { getDocs } from "firebase/firestore";
 
@@ -20,9 +20,12 @@ const Cartstate = (props) => {
         });
         setCart(products);
     }
-    const EmptyCart = () => {
-        localStorage.removeItem("cart");
-        setCart([]);
+    const EmptyCart = async () => {
+        cart.forEach(async (v) => {
+            await deleteDoc(doc(db, "cart", userID, "cart_item", v.id));
+            console.log(v.id);
+        })
+        console.log("Emptying cart");
     }
 
     return (

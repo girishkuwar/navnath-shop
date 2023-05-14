@@ -34,7 +34,7 @@ const Cart = () => {
     }
 
     const removeitem = async (v) => {
-        await deleteDoc(doc(db, "cart",userID,"cart_item", v.id));
+        await deleteDoc(doc(db, "cart", userID, "cart_item", v.id));
         cartc.update();
     }
 
@@ -46,7 +46,7 @@ const Cart = () => {
                     return (<><div className='cart-item'>
                         <img src={v.img} alt="" style={{ width: "200px" }} />
                         <div className="flexbox">
-                           <Link to={"/productpage/" + v.productid}><h1>{v.name}</h1></Link>
+                            <Link to={"/productpage/" + v.productid}><h1>{v.name}</h1></Link>
                             <p>Rs. {v.price}</p>
                             <button onClick={(e) => removeitem(v)}>Remove</button></div>
                     </div>

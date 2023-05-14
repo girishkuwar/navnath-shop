@@ -6,12 +6,12 @@ import { getFirestore } from "firebase/firestore"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAUgLCAhUbzo-72jTSTblPLrXzBz0Byw70",
-  authDomain: "navnath-traders.firebaseapp.com",
-  projectId: "navnath-traders",
-  storageBucket: "navnath-traders.appspot.com",
-  messagingSenderId: "654257735053",
-  appId: "1:654257735053:web:f9393feac5fe1bad4729c4"
+  apiKey: "AIzaSyDdZ4XocrlLjqmDUIE6zmJGV_Y7DETA7gs",
+  authDomain: "navnath-trader-s-8b8c9.firebaseapp.com",
+  projectId: "navnath-trader-s-8b8c9",
+  storageBucket: "navnath-trader-s-8b8c9.appspot.com",
+  messagingSenderId: "67537581286",
+  appId: "1:67537581286:web:87a94e28e48f6d08bf7727"
 };
 
 // Initialize Firebase

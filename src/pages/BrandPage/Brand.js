@@ -34,15 +34,14 @@ const Brand = () => {
         })
         getBrand();
         window.scrollTo(0, 0);
-
         return () => { unsub(); }
     }, [])
 
     return (
         <>
-        <div className="brand-name">
-            <h1>{brand.name}</h1>
-        </div>
+            <div className="brand-name">
+                <h1>{brand.name}</h1>
+            </div>
             <div className="items">
                 {
                     products.map((e) => {

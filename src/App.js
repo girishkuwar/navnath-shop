@@ -15,6 +15,7 @@ import Cartstate from './context/CartState';
 import Contact from './pages/Contact/Contact';
 import ViewContact from './Admin/ViewContact';
 import ViewProducts from './Admin/ViewProducts';
+import Payment from './pages/Payment/Payment';
 function App() {
 
 
@@ -33,6 +34,7 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="cart" element={<Cart />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="payment" element={<Payment />} />
           </Route>
           <Route path='/admin' element={<Admin />}>
             <Route index element={<AddProduct />} />
