@@ -53,11 +53,19 @@ const Header = () => {
                     <li><Link to={"/about"} >About</Link></li>
                     <li><Link to={"/contact"}>Contact</Link></li>
                     {
-                        auth ? <li><a href="" onClick={logout}>LogOut</a></li> :
+                        auth ? <li>
+                            <div class="dropdown">
+                                <a class="dropbtn"><b> {user}</b></a>
+                                <div class="dropdown-content">
+                                    <Link to={"/profile"} >My Profile</Link>
+                                    <Link to={"/orders"} >Orders</Link>
+                                    <a href="" onClick={logout}>LogOut</a>
+                                </div>
+                            </div>
+
+                        </li> : <>
                             <li><Link to={"/login"}>Log In</Link></li>
-                    }
-                    {
-                        user ? <li><a href="">{user}</a></li> : ""
+                        </>
                     }
                     <li></li>
                     <li><Link to={"/cart"}>
