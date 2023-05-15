@@ -16,6 +16,8 @@ import Contact from './pages/Contact/Contact';
 import ViewContact from './Admin/ViewContact';
 import ViewProducts from './Admin/ViewProducts';
 import Payment from './pages/Payment/Payment';
+import Myprofile from './pages/Myprofile/Myprofile';
+import Orders from './pages/Orders/Orders';
 function App() {
 
 
@@ -35,6 +37,8 @@ function App() {
             <Route path="cart" element={<Cart />} />
             <Route path="contact" element={<Contact />} />
             <Route path="payment" element={<Payment />} />
+            <Route path="profile" element={<Myprofile />} />
+            <Route path="orders" element={<Orders />} />
           </Route>
           <Route path='/admin' element={<Admin />}>
             <Route index element={<AddProduct />} />
