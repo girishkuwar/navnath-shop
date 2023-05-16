@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import dp from "../../assets/dp.jpg"
+import dp from "../../assets/bg.jpg"
 import "./about.css"
 
 const About = () => {
@@ -18,7 +18,16 @@ const About = () => {
       <div className="about-text">
       <div className="col">
         <div className="row">
-          <p>Lorem, ipsum dgolor sit amet consectetur adipisicing elit. Eligendi commodi labore, assumenda repellendus vero, reprehenderit nisi alias iste architecto, sequi amet magni eius. Quod dolorem odit pariatur vero, dignissimos eligendi deserunt eum et sapiente harum, tempore dolore architecto? Temporibus consectetur voluptate quibusdam officiis eos officia ipsam ullam sequi fugit sit illo doloremque recusandae at, sunt nulla cum! Laborum porro tempore, necessitatibus iste itaque atque quo. <br/>          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore rerum eligendi culpa dignissimos esse quae qui, saepe non animi! Totam ab exercitationem veniam libero, quod officia itaque corporis mollitia labore reiciendis maxime suscipit? Qui illum natus doloribus? Nam dolorum quia libero repudiandae adipisci dolorem nostrum vero exercitationem molestias repellendus sit quo ratione commodi porro iusto nisi, dolore ut accusamus. Rem consequatur deleniti reprehenderit nobis officiis!</p>
+
+          <h1>Homes that transcend your aspirations</h1>
+      <p>Contemporary lifestyles have been driving us to be at the top of our game. We offer a comprehensive portfolio of products ranging from sanitaryware, faucets and tiles to wellness solutions like high-end showers, steam cubicles, whirlpools, and more. Every product is a design marvel resulting from advanced technology combined with innovative processes.</p>
+      <p>We also bring creations from the best design studios in the world through Isvea - an Italian luxury designer brand; Senator - a premium range of sanitaryware, faucet, wellness and mirrors . Navnath Trader's is inevitably the first choice for those seeking the finest for their home.</p>
+
+      <p><b>The Navnath Trader's Edge – built on a foundation of technology</b></p>
+
+      <p>Our commitment to technology lends us a competitive advantage that’s unparalleled. Since inception in 1980, we have invested in state-of-the-art manufacturing plants to achieve the highest standards of quality. From manufacturing precision to that impeccable body finish, our factories ensure every product meets quality level.</p>
+
+      <p>We achieve this by incorporating latest technologies like 3D prototype printer, fully automatic chrome plating, robotic grinding and polishing machine, robotic glazing machine and pressure casting machine at our faucets and sanitaryware manufacturing factories. Our brands continues to be the leader in the industry with its futuristic technology.</p>
         </div>
         <div className="row">
           <img src={dp} alt="" />
