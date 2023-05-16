@@ -68,7 +68,7 @@ const Header = () => {
                         </>
                     }
                     <li></li>
-                    <li><Link to={"/cart"}>
+                    <li><Link to={"/cart"} className="cart">
                         <img src={cartimg} style={{ width: "30px" }} alt="" />
                         {cartc ?
                             <span className='cart-item'>{cartc.cart.length}</span>
