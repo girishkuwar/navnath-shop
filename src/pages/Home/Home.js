@@ -29,7 +29,7 @@ const Home = () => {
             <img style={{ width: '100%' }} src={fadeImage.url} />
             <div className="text">
               <h1>Navnath Trader's</h1>
-              <h6> the definition of Luxury</h6>
+              <h6>The Definition Of Luxury</h6>
             </div>
           </div>
         ))}
