@@ -31,7 +31,7 @@ const Admin = () => {
     <div className='admin'>
       {(auth === 1) ? <>
         <div className="menu">
-          <h2>Navnath Traders</h2>
+          <h2><NavLink to={"report"}>Navnath Traders</NavLink></h2>
           <div className="line"></div>
           <li><NavLink to={"addproduct"}>Add Product</NavLink></li>
           <li><NavLink to={"viewproducts"}>Product</NavLink></li>
@@ -40,7 +40,7 @@ const Admin = () => {
           <li><NavLink to={"viewusers"}>View Customer</NavLink></li>
         </div>
         <div className="menu-space"></div>
-        <div className="container">
+        <div className="admin-container">
           <Outlet />
         </div>
       </> : <>
