@@ -42,7 +42,7 @@ const Orders = () => {
                         <div className="row">
                             <h1>{e.product_name}</h1>
                             <h2>{e.status}</h2>
-                            <button onClick={() => CancelOrder(e.id)}>Cancel</button>
+                            {(e.status !== "canceled")  && (e.status !== "Delevered") && <button onClick={() => CancelOrder(e.id)}>Cancel</button>}
                         </div>
                     </div>)
                 })
